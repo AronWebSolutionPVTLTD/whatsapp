@@ -1,10 +1,10 @@
 const socket = io()
-let name;
+let namee;
 let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message__area')
 do {
-    name = prompt('Please enter your name: ')
-} while(!name)
+    namee = prompt('Please enter your namee: ')
+} while(!namee)
 
 textarea.addEventListener('keyup', (e) => {
     if(e.key === 'Enter') {
@@ -14,7 +14,7 @@ textarea.addEventListener('keyup', (e) => {
 
 function sendMessage(message) {
     let msg = {
-        user: name,
+        user: namee,
         message: message.trim()
     }
     // Append 
@@ -29,8 +29,8 @@ function sendMessage(message) {
 
 function appendMessage(msg, type) {
     let mainDiv = document.createElement('div')
-    let className = type
-    mainDiv.classList.add(className, 'message')
+    let classnamee = type
+    mainDiv.classList.add(classnamee, 'message')
 
     let markup = `
         <h4>${msg.user}</h4>
